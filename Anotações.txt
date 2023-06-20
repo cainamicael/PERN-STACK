@@ -1,0 +1,40 @@
+In the backend part, I will to write in english to training my english
+
+Backend
+
+The project will be: TO-DO List
+
+After the command npm init -y, we will to intall the dependencies
+
+    npm i express pg cors //Cors is for to connect the server side and the client side (react) in the localhost
+
+    We will to install nodemon and run: npx nodemon index.js
+
+The "header" application: 
+
+    const express = require('express')
+    const cors = require('cors')
+    const app = express()
+
+    app.use(cors())
+    app.use(express.json())
+
+    app.listen(5000, () => {
+        console.log('The server is runnind on 5000 port')
+    })
+
+Configuring our project:
+
+We will to create the archiver: database.sql to facitity the write of the queries - We will to use psql shell
+
+Exemple:
+
+    CREATE DATABASE todolist;
+
+    CREATE TABLE todo (
+        todo_id SERIAL PRIMARY KEY,
+        description VARCHAR(255)
+    );
+
+Connecting database on the node:
+
