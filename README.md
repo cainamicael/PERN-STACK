@@ -1,4 +1,4 @@
-# PERN STACK FORMATION | fORMAÇÃO PERN STACK
+# PERN STACK FORMATION | FORMAÇÃO PERN STACK
 In this repository i will to share my code for the formation PERN Stack
 
 Neste repositório irei compartilhar meu código para a formação PERN Stack
