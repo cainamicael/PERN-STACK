@@ -1,4 +1,4 @@
-In the backend part, I will to write in english to training my english
+NOTE: In the backend part, I will to write in english to training my english
 
 Backend
 
@@ -36,5 +36,20 @@ Exemple:
         description VARCHAR(255)
     );
 
-Connecting database on the node:
+Connecting database on the node (db.js):
+
+    const Pool = require('pg').Pool
+
+    const pool = new Pool({
+        user: 'postgres', //default
+        password: 'admin',
+        host: 'localhost',
+        port: 5432, //default
+        database: 'todolist'
+    })
+
+    module.exports = pool
+
+On the index.js: const pool = require('./db')
+
 
