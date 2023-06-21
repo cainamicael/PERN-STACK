@@ -10,7 +10,6 @@ function App() {
 
       <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
       <Article titulo="Notícia 02" descricao="Descrição da notícia 02"></Article>
-
     </div>
   );
 }
