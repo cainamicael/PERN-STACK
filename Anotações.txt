@@ -152,3 +152,41 @@ Usando nosso componente no App.js:
     import Texto from './Texto'
 
     e podemos chamar nosso componente através das tags: <Texto></Texto>
+
+Props: São propriedades
+
+Componente com props:
+
+    import React from 'react'
+
+    export default function Article(props) {
+        return(
+            <div>
+                <article>
+                    <h1>{props.titulo}</h1>
+                    <h4>{props.descricao}</h4>
+                </article>
+                <br />
+            </div>
+        )
+    }
+
+Usando props:
+
+    import './App.css';
+    import Article from './components/Article'
+
+    function App() {
+    return (
+        <div className="App">
+        <h1>Blog da DankiCode</h1>
+        <h2>Ciência e tecnologia</h2>
+        <hr />
+
+        <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
+
+        </div>
+    );
+    }
+
+    export default App;

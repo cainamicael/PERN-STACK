@@ -1,27 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Texto from './Texto'
+import Article from './components/Article'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Blog da DankiCode</h1>
+      <h2>Ciência e tecnologia</h2>
+      <hr />
 
-        <Texto></Texto> 
+      <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
