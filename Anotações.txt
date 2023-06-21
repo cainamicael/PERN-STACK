@@ -130,3 +130,4 @@ Instalando o react: npx create-react-app primeiraaula //Ou  cra
 
     cd primeiraaula
     npm start
+    
