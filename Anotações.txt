@@ -52,4 +52,7 @@ Connecting database on the node (db.js):
 
 On the index.js: const pool = require('./db')
 
+Routes:
+
+
 
