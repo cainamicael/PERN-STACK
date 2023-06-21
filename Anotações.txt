@@ -122,12 +122,8 @@ Queries used in this CRUD:
 
 
 
-
-
-
-
-
-
 NOTA: Como é um conceito novo para mim, irei escrever em português a parte do frontend, para facilitar meu estudo
 
 FRONTEND
+
+
