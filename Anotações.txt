@@ -126,4 +126,7 @@ NOTA: Como é um conceito novo para mim, irei escrever em português a parte do 
 
 FRONTEND
 
+Instalando o react: npx create-react-app primeiraaula //Ou  cra
 
+    cd primeiraaula
+    npm start
