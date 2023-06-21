@@ -213,3 +213,27 @@ Variáveis no componente:
     }
 
 componentes de classe:
+
+    import './App.css';
+    import React from 'react'
+
+    class App extends React.Component {
+    onclick() {
+        alert('Isso é um alerta')
+    }
+
+    render() {
+        return (
+        <div className="App">
+            <h1>Blog da DankiCode</h1>
+            <h2>Ciência e tecnologia</h2>
+            <hr />
+
+            <button onclick={this.onclick}>Clique</button>
+        </div>
+        )
+    }
+
+    }
+
+    export default App;
