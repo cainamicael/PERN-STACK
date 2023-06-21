@@ -126,8 +126,29 @@ NOTA: Como é um conceito novo para mim, irei escrever em português a parte do 
 
 FRONTEND
 
-Instalando o react: npx create-react-app primeiraaula //Ou  cra
+Instalando o react: npx create-react-app primeiraaula //Ou cra
 
     cd primeiraaula
     npm start
     
+O que é jsx: É como se fosse o html dentro do JavaScript
+
+Componentes:
+
+Criando componentes: Na pasta src, criarei um arquivo chamado Texto.js, que será nosso primeiro componente
+
+    import './App.css' //Para estilizar o componente
+
+    function Texto() {
+        return( //Parênteses, não chave
+            <p>Criamos nosso primeiro componente</p>
+        )
+    }
+
+    export default Texto
+
+Usando nosso componente no App.js:
+
+    import Texto from './Texto'
+
+    e podemos chamar nosso componente através das tags: <Texto></Texto>
