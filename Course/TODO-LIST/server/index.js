@@ -22,7 +22,7 @@ app.get('/todoes/:id', async (req, res) => {
         const { id } = req.params
         const todo = await pool.query(`SELECT * FROM todo WHERE todo_id = $1`, [id])
 
-        if(!todo.rows[0]) { return res.status(400).json({message: "Não encontrado!"}) }
+        if(!todo.rows[0]) { return res.status(400).json({message: "Item not found"}) }
 
         res.status(200).json(todo.rows[0])
     } catch (error) {
@@ -49,7 +49,7 @@ app.put('/todoes/:id', async (req, res) => {
         const { id } = req.params
         const updateTodo = await pool.query(`UPDATE todo SET description = $1 WHERE todo_id = $2`, [description, id])
 
-        res.status(201).json({message: "Updated item!"})
+        res.status(201).json({message: "Item has updated with sucess!"})
     } catch (error) {
         console.error(error.message)
     }
@@ -61,7 +61,7 @@ app.delete('/todoes/:id', async (req, res) => {
         const { id } = req.params
         const deleteTodo = await pool.query(`DELETE FROM todo WHERE todo_id = $1`, [id])
 
-
+        res.status(200).json({message: "Item has deleted with sucess!"})
     } catch (error) {
         console.error(error.message)
     }
