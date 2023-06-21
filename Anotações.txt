@@ -71,4 +71,3 @@ Queries used in this CRUD:
     UPDATE todo SET description = $1 WHERE todo_id = $2
     DELETE FROM todo WHERE todo_id = $1
 
-
