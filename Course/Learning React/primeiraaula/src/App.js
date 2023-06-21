@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Texto from './Texto'
 import Article from './components/Article'
 
 function App() {
@@ -11,6 +9,7 @@ function App() {
       <hr />
 
       <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
+      <Article titulo="Notícia 02" descricao="Descrição da notícia 02"></Article>
 
     </div>
   );
