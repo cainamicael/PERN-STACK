@@ -52,7 +52,16 @@ Connecting database on the node (db.js):
 
 On the index.js: const pool = require('./db')
 
-Routes:
+Routes (using database):
 
+    app.post('/todoes', async (req, res) => {
+        try {
+            const { description } = req.body
+            const newTodo = await pool.query(`INSERT INTO todo (description) VALUES($1) RETURNING *`, [description]) //Avoid SQL Injections
+            res.status(201).json(newTodo.rows[0])
+        } catch (error) {
+            console.error(error.message)
+        }
+    })
 
 
