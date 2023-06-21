@@ -56,6 +56,16 @@ app.put('/todoes/:id', async (req, res) => {
 })
 
 //Delete route
+app.delete('/todoes/:id', async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleteTodo = await pool.query(`DELETE FROM todo WHERE todo_id = $1`, [id])
+
+
+    } catch (error) {
+        console.error(error.message)
+    }
+})
 
 app.listen(5000, () => {
     console.log('The server is runnind on 5000 port')

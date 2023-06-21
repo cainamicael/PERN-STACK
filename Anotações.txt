@@ -6,7 +6,7 @@ The project will be: TO-DO List
 
 After the command npm init -y, we will to intall the dependencies
 
-    npm i express pg cors //Cors is for to connect the server side and the client side (react) in the localhost
+    npm i express dotenv pg cors //Cors is for to connect the server side and the client side (react) in the localhost
 
     We will to install nodemon and run: npx nodemon index.js
 
@@ -62,5 +62,13 @@ Routes (using database):
         console.error(error.message)
     }
 })
+
+Queries used in this CRUD:
+
+    SELECT * FROM todo
+    SELECT * FROM todo WHERE todo_id = $1
+    INSERT INTO todo (description) VALUES($1) RETURNING *
+    UPDATE todo SET description = $1 WHERE todo_id = $2
+    DELETE FROM todo WHERE todo_id = $1
 
 
