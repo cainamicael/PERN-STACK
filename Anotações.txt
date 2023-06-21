@@ -53,4 +53,14 @@ Routes (using database):
         }
     })
 
+    //Listing all
+    app.get('/todoes', async (req, res) => {
+    try {
+        const todoes = await pool.query(`SELECT * FROM todo`)
+        res.status(200).json(todoes.rows)
+    } catch (error) {
+        console.error(error.message)
+    }
+})
+
 
