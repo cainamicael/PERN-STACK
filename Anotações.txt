@@ -1,6 +1,6 @@
 NOTE: In the backend part, I will to write in english to training my english
 
-Backend
+BACKEND
 
 The project will be: TO-DO List
 
@@ -71,3 +71,63 @@ Queries used in this CRUD:
     UPDATE todo SET description = $1 WHERE todo_id = $2
     DELETE FROM todo WHERE todo_id = $1
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NOTA: Como é um conceito novo para mim, irei escrever em português a parte do frontend, para facilitar meu estudo
+
+FRONTEND
