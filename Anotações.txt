@@ -229,11 +229,67 @@ componentes de classe:
             <h2>Ciência e tecnologia</h2>
             <hr />
 
-            <button onclick={this.onclick}>Clique</button>
+            <button onClick={this.onclick}>Clique</button>
         </div>
         )
     }
 
+    }
+
+    export default App;
+
+Hooks:
+
+useState:
+
+    import { useState } from 'react';
+    import './App.css';
+    import Article from './components/Article'
+
+    function App() {
+
+    const [nome, setNome] = useState('Valor inicial') //Serve para guardar o valor inicial - o nome só aceita leitura. Para mudar, usa-se o setNome
+
+    function changeName() {
+        setNome('Ciência e tecnologia')
+    }
+
+    return (
+        <div className="App">
+        <h1>Blog da DankiCode</h1>
+        <h2>{nome}</h2>
+        <button onClick={changeName}>Mudar o nome pelo setNome</button>
+        <hr />
+
+        <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
+        <Article titulo="Notícia 02" descricao="Descrição da notícia 02"></Article>
+        </div>
+    );
+    }
+
+    export default App;
+
+useEffect:
+
+    import { useState, useEffect } from 'react';
+    import './App.css';
+
+    function App() {
+
+    const [nome, setNome] = useState('Valor inicial') //Serve para quardar o valor inicial - o nome só aceita leitura. Para mudar, usa-se o setNome
+
+    useEffect(() => {  //Toda vez que o objeto é modificado, ele captura e renderiza
+        console.log(nome)
+    }, [nome])
+
+    return (
+        <div className="App">
+        <header className="App-header">
+            <h1>Nome</h1>
+            <input onChange={e => setNome(e.target.value)}/>
+        </header>
+        </div>
+    );
     }
 
     export default App;

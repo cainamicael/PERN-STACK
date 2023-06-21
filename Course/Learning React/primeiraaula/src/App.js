@@ -1,15 +1,20 @@
+import { useState, useEffect } from 'react';
 import './App.css';
-import Article from './components/Article'
 
 function App() {
+
+  const [nome, setNome] = useState('Valor inicial') //Serve para quardar o valor inicial - o nome só aceita leitura. Para mudar, usa-se o setNome
+
+  useEffect(() => {  //Toda vez que o objeto é modificado, ele captura e renderiza
+    console.log(nome)
+  }, [nome])
+
   return (
     <div className="App">
-      <h1>Blog da DankiCode</h1>
-      <h2>Ciência e tecnologia</h2>
-      <hr />
-
-      <Article titulo="Notícia 01" descricao="Descrição da notícia 01"></Article>
-      <Article titulo="Notícia 02" descricao="Descrição da notícia 02"></Article>
+      <header className="App-header">
+        <h1>Nome</h1>
+        <input onChange={e => setNome(e.target.value)}/>
+      </header>
     </div>
   );
 }
