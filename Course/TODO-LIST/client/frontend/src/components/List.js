@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import EditTodo from './Edit'
 
 const ListTodo = () => {
   const [todoes, setTodoes] = useState([])
@@ -44,7 +45,7 @@ const ListTodo = () => {
           {todoes.map((todo) => (
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
-              <td>Editar</td>
+              <td><EditTodo todo={todo} /></td>
               <td>
                 <button className="btn btn-danger" onClick={() => deleteTodo(todo.todo_id)}>
                   Deletar
